@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Plex",
+    "url": "http://192.168.1.200:32400",
+    "desc": "Play Movies & TV",
+    "image": "assets/images/plex.png"
+  },
+  {
+    "name": "Radarr",
+    "url": "http://192.168.1.200:7878",
+    "desc": "Find Movies to Download",
+    "image": "assets/images/radarr.png"
+  },
+  {
+    "name": "Sonarr",
+    "url": "http://192.168.1.200:8989",
+    "desc": "Find TV Shows to Download",
+    "image": "assets/images/sonarr.png"
+  },
+  {
+    "name": "SABnzbd",
+    "url": "http://192.168.1.200:8080",
+    "desc": "Check on Downloads",
+    "image": "assets/images/sabnzbd.png"
+  }
+]

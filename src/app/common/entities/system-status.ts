@@ -1,0 +1,30 @@
+export class SystemStatus {
+  version: string | undefined;
+  buildTime: string | undefined;
+  isDebug: boolean | undefined;
+  isProduction: boolean | undefined;
+  isAdmin: boolean | undefined;
+  isUserInteractive: boolean | undefined;
+  startupPath: string | undefined;
+  appData: string | undefined;
+  osName: string | undefined;
+  osVersion: string | undefined;
+  isNetCore: boolean | undefined;
+  isMono: boolean | undefined;
+  isLinux: boolean | undefined;
+  isOsx: boolean | undefined;
+  isWindows: boolean | undefined;
+  isDocker: boolean | undefined;
+  mode: string | undefined;
+  branch: string | undefined;
+  authentication: string | undefined;
+  sqliteVersion: string | undefined;
+  migrationVersion: number | undefined;
+  urlBase: string | undefined;
+  runtimeVersion: string | undefined;
+  runtimeName: string | undefined;
+  startTime: string | undefined;
+  packageVersion: string | undefined;
+  packageAuthor: string | undefined;
+  packageUpdateMechanism: string | undefined;
+}

@@ -1,0 +1,16 @@
+<div class="flexbox-parent container">
+  <div layout="row" layout-align="center center">
+
+    <h1 class="content-header">Media Server Stuff</h1>
+
+    <mat-card class="custom-contact-card"  *ngFor="let app of apps">
+      <mat-card-header class="custom-card-header">
+        <div mat-card-avatar style="background-image: url({{app.image}}); background-size: cover;"></div>
+        <mat-card-title>
+          <a mat-stroked-button color="primary" href="{{app.url}}" target="_blank">{{app.name}}</a>
+        </mat-card-title>
+        <mat-card-subtitle>{{app.desc}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>

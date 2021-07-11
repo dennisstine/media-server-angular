@@ -1,0 +1,19 @@
+<div class="container-content">
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Plex Info from Docker Engine
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{dockerApiUrl}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <br/>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="plexData" [expanded]="true"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

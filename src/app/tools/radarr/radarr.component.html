@@ -1,0 +1,34 @@
+<div class="container-content">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Radarr Info from Docker Engine
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{dockerApiUrl}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <br/>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="radarrDockerData" [expanded]="true"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Radarr Info from API
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{apiUrl}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <br/>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="radarrData" [expanded]="true"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

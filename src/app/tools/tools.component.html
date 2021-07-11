@@ -1,0 +1,19 @@
+<div class="flexbox-parent container">
+  <div layout="row" layout-align="center center">
+
+    <h1 class="content-header">Docker & Container Info</h1>
+
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let tab of tabs"
+         (click)="activeLink = tab"
+         [routerLink]="tab.route"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        <fa-icon [icon]="[tab.faPrefix, tab.faIcon]" size="lg"></fa-icon>
+        &nbsp;{{tab.label}} </a>
+    </nav>
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
