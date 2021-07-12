@@ -1,0 +1,60 @@
+<div class="container-content">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          System Info
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{dockerSystemInfoUrl}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <br/>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="dockerSystemInfo" [expanded]="false"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Version Info
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{dockerVersionInfo}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="dockerVersionInfo" [expanded]="false"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Container Info
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <a mat-stroked-button color="primary"
+         href="{{dockerContainerInfoUrl}}"
+         target="_blank">View JSON &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+      </a>
+      <div class="api-json-viewer">
+        <ngx-json-viewer [json]="dockerContainerInfo" [expanded]="false"></ngx-json-viewer>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-card class="monitor-button">
+    <a mat-stroked-button color="primary"
+       href="{{cadvisorUrl}}"
+       target="_blank">View cAdvisor Host Monitoring &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+    </a>
+  </mat-card>
+  <mat-card class="monitor-button">
+    <a mat-stroked-button color="primary"
+       href="{{cadvisorUrl}}/docker"
+       target="_blank">View cAdvisor Docker Monitors &nbsp;<fa-icon [icon]="['fas', 'external-link-alt']"></fa-icon>
+    </a>
+  </mat-card>
+</div>
