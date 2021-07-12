@@ -1,4 +1,4 @@
-export class SystemStatus {
+export class ServarrSystemStatus {
   version: string | undefined;
   buildTime: string | undefined;
   isDebug: boolean | undefined;

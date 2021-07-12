@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpApiService } from "../../common/services/http-api.service";
 import { environment } from "../../../environments/environment";
-import { SystemStatus } from "../../common/entities/system-status";
+import { ServarrSystemStatus } from "../../common/entities/servarr-system-status";
 import {DockerContainerDetails} from "../../common/entities/docker/docker-container-details";
 
 @Component({
@@ -14,7 +14,7 @@ export class SonarrComponent implements OnInit {
 
   constructor(private httpApiService: HttpApiService) { }
 
-  sonarrData = new SystemStatus();
+  sonarrData = new ServarrSystemStatus();
   sonarrDockerData = new DockerContainerDetails();
 
   apiUrl = environment.mediaServerHost
@@ -29,7 +29,7 @@ export class SonarrComponent implements OnInit {
 
   ngOnInit() {
 
-    this.httpApiService.sendRadarrSonarrGetRequest(this.apiUrl).subscribe((data: SystemStatus)=>{
+    this.httpApiService.sendServarrGetRequest(this.apiUrl).subscribe((data: ServarrSystemStatus)=>{
       this.sonarrData = data;
     });
 
